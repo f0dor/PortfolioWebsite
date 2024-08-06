@@ -1,0 +1,47 @@
+---
+title: 'Development of a Precise Time and Speed Measurement Device for Sports Activities'
+date: '2024-08-06'
+tags: ['microcontroller', 'sports', 'BLE', 'ESP32-C3']
+draft: false
+summary: 'This thesis outlines the development of a device to measure speed and time with high accuracy in sports activities using the ESP32-C3 microcontroller and BLE technology.'
+---
+
+# Introduction
+
+The thesis "Razvoj uređaja za precizno mjerenje brzine i vremena u sportskim aktivnostima" by Marko Šimić outlines the development of a device designed to measure speed and time with high accuracy in sports activities using the ESP32-C3 microcontroller and BLE technology. The device ensures users can track their sports performance with a maximum error margin of ±50 milliseconds. This paper provides an overview of the project's background, design methodology, testing, and results, along with potential improvements and applications.
+
+# Background
+
+Microcontrollers, like ESP32 and Arduino, have become essential in modern technology due to their versatility, small size, low power consumption, and ability to integrate with various sensors and wireless protocols like Wi-Fi and Bluetooth. These characteristics make them integral in fields such as IoT, robotics, and automation. Bluetooth, in particular, allows for the creation of innovative devices that can connect with a wide range of other gadgets, including smartphones, headphones, and speakers.
+
+# Literature Review
+
+The ESP32-C3 microcontroller, an advanced System-on-Chip (SoC) with integrated Wi-Fi and Bluetooth capabilities, is central to this project. The microcontroller's features include high performance, low power consumption, and a wide range of peripherals. Bluetooth Low Energy (BLE) is a key technology used in this project for wireless communication, chosen for its low energy consumption and robust connectivity.
+
+BLE protocol's application structures and the NimBLE stack, a complete BLE software stack, were utilized to implement BLE communication. The protocol defines profiles, services, characteristics, and attributes, facilitating standardized communication between devices. This standardization ensures that different devices can exchange data and control functions seamlessly.
+
+# Methodology
+
+The project involves several stages, including the design and implementation of the device's hardware and software components. The main components used are the ESP32-C3 microcontroller and the HC-SR04-P ultrasonic distance sensor. The microcontroller serves as the brain of the device, while the ultrasonic sensor detects the passing of objects to start and stop the timer.
+
+The BLE protocol's implementation includes advertising, profiles, services, characteristics, and notifications. Advertising involves broadcasting the device's presence to other BLE devices. Profiles define specific ways devices communicate, while services represent functionalities offered by the device. Characteristics are data units within services, and attributes are individual data points within characteristics.
+
+# Implementation
+
+The object detection service is a crucial part of the device, involving sending trigger signals and measuring the response time. When an object passes the first station, the ultrasonic sensor sends a trigger signal, and the microcontroller starts the timer. The second station stops the timer when the object passes, measuring the total time taken. BLE communication is used to transmit data between the two stations, ensuring synchronized timing and accurate measurements.
+
+# Testing and Results
+
+The device underwent rigorous testing to ensure its accuracy and reliability. The testing process involved comparing the device's performance against commercial alternatives, measuring various sports activities to validate its precision. The results confirmed that the device could measure speed and time with an error margin of ±50 milliseconds, demonstrating its effectiveness in tracking sports performance.
+
+# Discussion
+
+The analysis of the results highlighted the device's functionality and cost-effectiveness. The manufacturing costs were significantly lower than commercial alternatives, making it an economical solution for athletes and sports enthusiasts. The discussion also covered potential enhancements, such as integrating additional sensors for more comprehensive data collection and expanding the device's applicability to other sports disciplines.
+
+# Conclusion
+
+The project successfully developed a device for accurate measurement of speed and time in sports activities using the ESP32-C3 microcontroller and BLE technology. The device's low cost, high accuracy, and potential for further enhancements make it a valuable tool for athletes. The study concludes with recommendations for future research and development, emphasizing the device's potential to revolutionize sports performance tracking.
+
+# Keywords
+
+Microcontroller, speed measurement, wireless communication, sensor, programming.

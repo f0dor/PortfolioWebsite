@@ -7,12 +7,11 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Time Measuring Device for Sports Activities',
+    description: `This time measuring device uses an ESP32-C3 microcontroller and HC-SR04-P ultrasonic sensors to detect objects, 
+    starting and stopping a timer at two different stations. BLE communication ensures synchronization between stations, making it ideal for accurately timing events like running.`,
+    imgSrc: '/static/images/startline.jpg',
+    href: '/blog/time-measuring-device',
   },
   {
     title: 'The Time Machine',
