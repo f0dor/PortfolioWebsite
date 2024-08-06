@@ -20,7 +20,7 @@ export default function Home({ posts }) {
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((post) => {
+          {posts.slice(0, 3).map((post) => {
             const { slug, date, title, summary, tags } = post
             return (
               <li key={slug} className="py-12">
@@ -79,11 +79,6 @@ export default function Home({ posts }) {
           >
             All Posts &rarr;
           </Link>
-        </div>
-      )}
-      {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
         </div>
       )}
     </>
