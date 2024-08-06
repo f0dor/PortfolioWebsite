@@ -1,24 +1,21 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
+  title: "Marko's Portfolio website",
   author: 'Marko Šimić',
   headerTitle: 'Markos Portfolio',
   description: 'A portfolio website created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://markos-portfolio-website-h4py6fsfu-marko-simics-projects.vercel.app',
   siteRepo: 'https://github.com/f0dor/PortfolioWebsite',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
-  mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'address@yoursite.com',
   github: 'https://github.com',
   x: 'https://twitter.com/x',
-  // twitter: 'https://twitter.com/Twitter',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
   instagram: 'https://www.instagram.com',
   locale: 'en-US',
   analytics: {
