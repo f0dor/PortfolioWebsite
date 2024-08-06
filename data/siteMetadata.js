@@ -3,7 +3,7 @@ const siteMetadata = {
   title: "Marko's Portfolio website",
   author: 'Marko Šimić',
   headerTitle: 'Markos Portfolio',
-  description: 'A portfolio website created with Next.js and Tailwind.css',
+  description: '',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://markos-portfolio-website-h4py6fsfu-marko-simics-projects.vercel.app',

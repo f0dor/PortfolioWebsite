@@ -14,13 +14,19 @@ const projectsData: Project[] = [
     href: '/blog/time-measuring-device',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
+    title: 'Machine Learning for Early Rehospitalization Prediction',
+    description: `Colleagues and I participated in an AI4HealthCRO competition, predicting early rehospitalizations using machine learning.
+    We employed a classic neural network model, trained on anonymized hospital data, leveraging the PyTorch framework in Python to develop the solution.`,
+    imgSrc: '/static/images/aihealth.jpg',
     href: '/blog/the-time-machine',
   },
+  {
+    title: 'Real Estate Analytics',
+    description: `In a Data Science project, real estate listings were scraped from Njuskalo.hr and analyzed to identify the most and least expensive cities, 
+    the areas with the highest number of listings, and key factors influencing prices, such as the number of rooms, bathrooms, floors, and distance from the coast.`,
+    imgSrc: '/static/images/realestate.jpg',
+    href: '/blog/the-time-machine',
+  },  
 ]
 
 export default projectsData
