@@ -1,0 +1,39 @@
+---
+title: 'Analysis of Real Estate Data for Croatian Cities'
+date: '2024-08-07'
+tags: ['real estate', 'data analysis', 'Python', 'visualization', 'Croatia']
+draft: false
+summary: 'This analysis explores real estate data for Croatian cities, focusing on metrics such as cost per square meter, the ratio of bathrooms to rooms, and average property sizes. Visualizations highlight key differences between cities and counties.'
+---
+
+# Introduction
+
+The analysis "Real Estate Data for Croatian Cities" explores various aspects of real estate metrics, focusing on the cost per square meter, the ratio of bathrooms to rooms, and average property sizes across different cities and counties in Croatia. The study aims to provide insights into real estate trends and variations, helping potential buyers and investors make informed decisions.
+
+# Data Loading and Initial Calculation
+
+The study begins with loading the dataset `merged_data_filtered.csv` containing columns such as `price`, `livingArea`, `city`, `county`, `numberOfRooms`, and `bathrooms with toilet`. A new metric, `cost_per_sqm`, is introduced to standardize property prices based on the living area, facilitating easier comparisons between properties of different sizes. The average cost per square meter is then calculated for each city and sorted to identify the most and least expensive cities.
+
+# Correlation Analysis
+
+To explore the relationship between the ratio of bathrooms to rooms (`bath_room_ratio`) and property prices, a new column is created. The ratio is cleaned to replace infinite values and fill missing values with the mean. The correlation coefficient between `bath_room_ratio` and `price` is calculated, revealing the strength of their relationship. An Ordinary Least Squares (OLS) regression model is then fitted to determine the statistical significance of this ratio in predicting property prices, with the model's summary providing detailed insights into the relationship's strength and significance.
+
+# Visualization of Average Cost Per Square Meter by City
+
+Cities are grouped based on their average cost per square meter, and the results are visualized using bar plots. For better comprehension, cities are divided into groups of 15, with each group plotted separately. This visualization helps identify cities with the highest and lowest costs per square meter, providing a clear picture of real estate prices across different regions.
+
+# Top and Bottom Cities by Cost Per Square Meter
+
+The study identifies the cities with the highest and lowest average costs per square meter, highlighting the top 5 and bottom 5 cities. The URLs of the most and least expensive listings are displayed, offering direct links for further investigation of individual properties. This section provides valuable insights for potential buyers and investors looking for affordable or high-end properties.
+
+# Analysis of Specific Counties
+
+The analysis focuses on three specific counties: Dubrovačko-neretvanska, Primorsko-goranska, and Splitsko-dalmatinska. For each county, the property with the highest cost per square meter is identified and displayed along with its URL. Additionally, the average number of rooms for each county is calculated and visualized using bar plots, helping to understand the typical property size in different counties. The number of listings per county is also visualized, providing insights into the real estate market's density in each region.
+
+# Conclusion
+
+The study provides a comprehensive analysis of real estate data, focusing on key metrics such as cost per square meter, the ratio of bathrooms to rooms, and average property sizes. The visualizations effectively communicate the findings, highlighting significant differences between cities and counties. The insights gained from this analysis can guide potential buyers and investors in making informed decisions based on property prices and characteristics across different regions.
+
+# Keywords
+
+Real estate, data analysis, Python, visualization, Croatia.

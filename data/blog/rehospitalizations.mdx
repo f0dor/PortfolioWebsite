@@ -1,0 +1,58 @@
+---
+title: 'Predicting Early Rehospitalizations Using Machine Learning'
+date: '2024-08-07'
+tags: ['machine learning', 'healthcare', 'neural network', 'Python', 'PyTorch']
+draft: false
+summary: 'This analysis details the development and training of a neural network model to predict early rehospitalizations of patients using healthcare data.'
+---
+
+# Introduction
+
+The analysis "Predicting Early Rehospitalizations Using Machine Learning" by Marko Šimić focuses on developing a neural network model to predict early rehospitalizations using healthcare data. The goal is to leverage machine learning techniques to identify patients at high risk of being readmitted shortly after discharge, potentially aiding in preventive care measures and resource allocation in hospitals.
+
+# Data Description
+
+The dataset used for training the model is `train_modified_encoded1.csv`, which includes various patient-related features and a target label indicating early rehospitalization. The columns of the dataset encompass a wide range of factors such as patient demographics, medical history, and medication details. Notable columns include `AdmissionDx`, `LOS`, `Age_Group`, `Surgery_Count`, `Discharge_Status`, and numerous drug count columns. 
+
+# Model Architecture
+
+The model is a neural network implemented using PyTorch. It consists of three fully connected (FC) layers:
+1. **Input Layer**: 323 input features
+2. **Hidden Layer 1**: 512 neurons, ReLU activation
+3. **Hidden Layer 2**: 128 neurons, ReLU activation
+4. **Output Layer**: 1 neuron, no activation function (output passed to a sigmoid function during evaluation)
+
+The ReLU activation function is used between the hidden layers to introduce non-linearity, and the model is optimized using Stochastic Gradient Descent (SGD) with a learning rate of 0.01. The loss function is Binary Cross-Entropy with Logits (BCEWithLogitsLoss), which is suitable for binary classification tasks.
+
+# Data Preparation
+
+The dataset is divided into features (`X`) and labels (`y`). The features are further split into training and testing sets with an 80-20 split. The data is then converted into PyTorch tensors and moved to the appropriate device (CPU or GPU).
+
+# Training Process
+
+The training process involves using K-Fold Cross-Validation with 5 splits to ensure robust model evaluation and mitigate overfitting. For each epoch, the model is trained on different folds of the training data, and the performance is validated on the held-out fold. Key metrics such as training loss, training accuracy, test loss, and test accuracy are tracked and averaged across the folds.
+
+### Training Loop
+
+1. **Forward Pass**: The input data is passed through the network to get the predicted logits.
+2. **Loss Calculation**: The Binary Cross-Entropy loss between the predicted logits and true labels is computed.
+3. **Backward Pass**: The gradients are calculated, and the optimizer updates the model parameters.
+4. **Evaluation**: After each epoch, the model's performance is evaluated on the test data using the held-out fold, and metrics are recorded.
+
+The training process is repeated for 10,000 epochs to ensure the model converges.
+
+# Results
+
+The training and evaluation results indicate the model's capability to predict early rehospitalizations with reasonable accuracy. The training and testing losses decrease steadily over epochs, and the model achieves satisfactory accuracy on both training and test sets. The detailed epoch-wise performance metrics provide insights into the model's learning dynamics and stability.
+
+# Evaluation on New Data
+
+After training, the model is evaluated on a new dataset (`test_modified_encoded1.csv`). The predicted probabilities and labels are saved to `evaluation_results.csv`. The model generates two probabilities (`Probability_0` and `Probability_1`) indicating the likelihood of no rehospitalization and early rehospitalization, respectively. The final predicted label is based on a threshold applied to `Probability_1`.
+
+# Conclusion
+
+The neural network model successfully predicts early rehospitalizations using healthcare data, showcasing the potential of machine learning in enhancing healthcare outcomes. The model's architecture, training process, and evaluation results are comprehensively detailed, providing a solid foundation for further improvements and applications in healthcare predictive analytics.
+
+# Keywords
+
+Machine learning, healthcare, neural network, PyTorch, rehospitalization prediction.

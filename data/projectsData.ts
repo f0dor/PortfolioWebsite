@@ -18,14 +18,14 @@ const projectsData: Project[] = [
     description: `Colleagues and I participated in an AI4HealthCRO competition, predicting early rehospitalizations using machine learning.
     We employed a classic neural network model, trained on anonymized hospital data, leveraging the PyTorch framework in Python to develop the solution.`,
     imgSrc: '/static/images/aihealth.jpg',
-    href: '/blog/the-time-machine',
+    href: '/blog/rehospitalizations',
   },
   {
     title: 'Real Estate Analytics',
     description: `In a Data Science project, real estate listings were scraped from Njuskalo.hr and analyzed to identify the most and least expensive cities, 
     the areas with the highest number of listings, and key factors influencing prices, such as the number of rooms, bathrooms, floors, and distance from the coast.`,
     imgSrc: '/static/images/realestate.jpg',
-    href: '/blog/the-time-machine',
+    href: '/blog/real-estate-analysis',
   },  
 ]
 
