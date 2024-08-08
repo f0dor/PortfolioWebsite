@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: "Marko's Portfolio website",
+  title: 'f0dor.dev',
   author: 'Marko Šimić',
-  headerTitle: 'Markos Portfolio',
+  headerTitle: 'f0dor.dev',
   description: '',
   language: 'en-us',
   theme: 'system', // system, dark or light
