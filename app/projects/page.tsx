@@ -1,10 +1,13 @@
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
+import { fetchEntries } from '../../lib/contentful'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
 
-export default function Projects() {
+export default async function Projects() {
+  const entries = await fetchEntries()
+  const posts = entries.map((entry) => entry.fields)
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -15,12 +18,12 @@ export default function Projects() {
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
+            {posts.map((d) => (
               <Card
                 key={d.title}
                 title={d.title}
                 description={d.description}
-                imgSrc={d.imgSrc}
+                imgSrc={`https:${d.image?.fields.file.url}`} // Ensure the image URL is correctly formed
                 href={d.href}
               />
             ))}
