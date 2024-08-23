@@ -24,7 +24,7 @@ export default async function Projects() {
                 title={d.title}
                 description={d.description}
                 imgSrc={`https:${d.image?.fields.file.url}`} // Ensure the image URL is correctly formed
-                href={d.href}
+                href={d.link}
               />
             ))}
           </div>
