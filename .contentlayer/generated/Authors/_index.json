@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Marko Šimić",
+    "avatar": "/static/images/profilna2.jpeg",
+    "occupation": "Computer Science student at FESB",
+    "company": "University of Split",
+    "email": "msimic05@fesb.hr",
+    "linkedin": "https://www.linkedin.com/in/marko-%C5%A1imi%C4%87-160884277/",
+    "github": "https://github.com/f0dor",
+    "body": {
+      "raw": "\nMarko Šimić is a 5th-year student at the University of Split, Faculty of Electrical Engineering, Mechanical Engineering, and Naval Architecture, studying Computer Science.\n\nHe is passionate about embedded systems development, machine learning, and data science. Marko's academic journey reflects a deep interest in the integration of hardware and software, aiming to innovate in areas that combine these fields.\n\nHis enthusiasm for machine learning and data science drives him to explore the cutting-edge of technology, contributing to advancements in intelligent systems and data-driven solutions.",
+      "code": "var Component=(()=>{var h=Object.create;var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var x=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),y=(e,t)=>{for(var i in t)o(e,i,{get:t[i],enumerable:!0})},r=(e,t,i,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let a of p(t))!f.call(e,a)&&a!==i&&o(e,a,{get:()=>t[a],enumerable:!(s=u(t,a))||s.enumerable});return e};var v=(e,t,i)=>(i=e!=null?h(g(e)):{},r(t||!e||!e.__esModule?o(i,\"default\",{value:e,enumerable:!0}):i,e)),b=e=>r(o({},\"__esModule\",{value:!0}),e);var m=x((_,c)=>{c.exports=_jsx_runtime});var k={};y(k,{default:()=>l,frontmatter:()=>j});var n=v(m()),j={name:\"Marko \\u0160imi\\u0107\",avatar:\"/static/images/profilna2.jpeg\",occupation:\"Computer Science student at FESB\",company:\"University of Split\",email:\"msimic05@fesb.hr\",X:\"https://x.com/elonmusk\",linkedin:\"https://www.linkedin.com/in/marko-%C5%A1imi%C4%87-160884277/\",github:\"https://github.com/f0dor\"};function d(e){let t={p:\"p\",...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.p,{children:\"Marko \\u0160imi\\u0107 is a 5th-year student at the University of Split, Faculty of Electrical Engineering, Mechanical Engineering, and Naval Architecture, studying Computer Science.\"}),(0,n.jsx)(t.p,{children:\"He is passionate about embedded systems development, machine learning, and data science. Marko's academic journey reflects a deep interest in the integration of hardware and software, aiming to innovate in areas that combine these fields.\"}),(0,n.jsx)(t.p,{children:\"His enthusiasm for machine learning and data science drives him to explore the cutting-edge of technology, contributing to advancements in intelligent systems and data-driven solutions.\"})]})}function l(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(d,{...e})}):d(e)}return b(k);})();\n;return Component;"
+    },
+    "_id": "authors/default.mdx",
+    "_raw": {
+      "sourceFilePath": "authors/default.mdx",
+      "sourceFileName": "default.mdx",
+      "sourceFileDir": "authors",
+      "contentType": "mdx",
+      "flattenedPath": "authors/default"
+    },
+    "type": "Authors",
+    "readingTime": {
+      "text": "1 min read",
+      "minutes": 0.415,
+      "time": 24900,
+      "words": 83
+    },
+    "slug": "default",
+    "path": "authors/default",
+    "filePath": "authors/default.mdx",
+    "toc": []
+  },
+  {
+    "name": "Sparrow Hawk",
+    "avatar": "/static/images/sparrowhawk-avatar.jpg",
+    "occupation": "Wizard of Earthsea",
+    "company": "Earthsea",
+    "twitter": "https://twitter.com/sparrowhawk",
+    "linkedin": "https://www.linkedin.com/sparrowhawk",
+    "body": {
+      "raw": "\nAt birth, Ged was given the child-name Duny by his mother. He was born on the island of Gont, as a son of a bronzesmith. His mother died before he reached the age of one. As a small boy, Ged had overheard the village witch, his maternal aunt, using various words of power to call goats. Ged later used the words without an understanding of their meanings, to surprising effect.\n\nThe witch knew that using words of power effectively without understanding them required innate power, so she endeavored to teach him what little she knew. After learning more from her, he was able to call animals to him. Particularly, he was seen in the company of wild sparrowhawks so often that his \"use name\" became Sparrowhawk.\n",
+      "code": "var Component=(()=>{var m=Object.create;var o=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var g=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),k=(e,t)=>{for(var n in t)o(e,n,{get:t[n],enumerable:!0})},i=(e,t,n,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let r of p(t))!f.call(e,r)&&r!==n&&o(e,r,{get:()=>t[r],enumerable:!(s=l(t,r))||s.enumerable});return e};var x=(e,t,n)=>(n=e!=null?m(u(e)):{},i(t||!e||!e.__esModule?o(n,\"default\",{value:e,enumerable:!0}):n,e)),b=e=>i(o({},\"__esModule\",{value:!0}),e);var w=g((j,h)=>{h.exports=_jsx_runtime});var y={};k(y,{default:()=>d,frontmatter:()=>v});var a=x(w()),v={name:\"Sparrow Hawk\",avatar:\"/static/images/sparrowhawk-avatar.jpg\",occupation:\"Wizard of Earthsea\",company:\"Earthsea\",twitter:\"https://twitter.com/sparrowhawk\",linkedin:\"https://www.linkedin.com/sparrowhawk\"};function c(e){let t={p:\"p\",...e.components};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(t.p,{children:\"At birth, Ged was given the child-name Duny by his mother. He was born on the island of Gont, as a son of a bronzesmith. His mother died before he reached the age of one. As a small boy, Ged had overheard the village witch, his maternal aunt, using various words of power to call goats. Ged later used the words without an understanding of their meanings, to surprising effect.\"}),(0,a.jsx)(t.p,{children:'The witch knew that using words of power effectively without understanding them required innate power, so she endeavored to teach him what little she knew. After learning more from her, he was able to call animals to him. Particularly, he was seen in the company of wild sparrowhawks so often that his \"use name\" became Sparrowhawk.'})]})}function d(e={}){let{wrapper:t}=e.components||{};return t?(0,a.jsx)(t,{...e,children:(0,a.jsx)(c,{...e})}):c(e)}return b(y);})();\n;return Component;"
+    },
+    "_id": "authors/sparrowhawk.mdx",
+    "_raw": {
+      "sourceFilePath": "authors/sparrowhawk.mdx",
+      "sourceFileName": "sparrowhawk.mdx",
+      "sourceFileDir": "authors",
+      "contentType": "mdx",
+      "flattenedPath": "authors/sparrowhawk"
+    },
+    "type": "Authors",
+    "readingTime": {
+      "text": "1 min read",
+      "minutes": 0.63,
+      "time": 37800,
+      "words": 126
+    },
+    "slug": "sparrowhawk",
+    "path": "authors/sparrowhawk",
+    "filePath": "authors/sparrowhawk.mdx",
+    "toc": []
+  }
+]

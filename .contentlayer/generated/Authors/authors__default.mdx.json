@@ -1,0 +1,32 @@
+{
+  "name": "Marko Šimić",
+  "avatar": "/static/images/profilna2.jpeg",
+  "occupation": "Computer Science student at FESB",
+  "company": "University of Split",
+  "email": "msimic05@fesb.hr",
+  "linkedin": "https://www.linkedin.com/in/marko-%C5%A1imi%C4%87-160884277/",
+  "github": "https://github.com/f0dor",
+  "body": {
+    "raw": "\nMarko Šimić is a 5th-year student at the University of Split, Faculty of Electrical Engineering, Mechanical Engineering, and Naval Architecture, studying Computer Science.\n\nHe is passionate about embedded systems development, machine learning, and data science. Marko's academic journey reflects a deep interest in the integration of hardware and software, aiming to innovate in areas that combine these fields.\n\nHis enthusiasm for machine learning and data science drives him to explore the cutting-edge of technology, contributing to advancements in intelligent systems and data-driven solutions.",
+    "code": "var Component=(()=>{var h=Object.create;var o=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var x=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),y=(e,t)=>{for(var i in t)o(e,i,{get:t[i],enumerable:!0})},r=(e,t,i,s)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let a of p(t))!f.call(e,a)&&a!==i&&o(e,a,{get:()=>t[a],enumerable:!(s=u(t,a))||s.enumerable});return e};var v=(e,t,i)=>(i=e!=null?h(g(e)):{},r(t||!e||!e.__esModule?o(i,\"default\",{value:e,enumerable:!0}):i,e)),b=e=>r(o({},\"__esModule\",{value:!0}),e);var m=x((_,c)=>{c.exports=_jsx_runtime});var k={};y(k,{default:()=>l,frontmatter:()=>j});var n=v(m()),j={name:\"Marko \\u0160imi\\u0107\",avatar:\"/static/images/profilna2.jpeg\",occupation:\"Computer Science student at FESB\",company:\"University of Split\",email:\"msimic05@fesb.hr\",X:\"https://x.com/elonmusk\",linkedin:\"https://www.linkedin.com/in/marko-%C5%A1imi%C4%87-160884277/\",github:\"https://github.com/f0dor\"};function d(e){let t={p:\"p\",...e.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(t.p,{children:\"Marko \\u0160imi\\u0107 is a 5th-year student at the University of Split, Faculty of Electrical Engineering, Mechanical Engineering, and Naval Architecture, studying Computer Science.\"}),(0,n.jsx)(t.p,{children:\"He is passionate about embedded systems development, machine learning, and data science. Marko's academic journey reflects a deep interest in the integration of hardware and software, aiming to innovate in areas that combine these fields.\"}),(0,n.jsx)(t.p,{children:\"His enthusiasm for machine learning and data science drives him to explore the cutting-edge of technology, contributing to advancements in intelligent systems and data-driven solutions.\"})]})}function l(e={}){let{wrapper:t}=e.components||{};return t?(0,n.jsx)(t,{...e,children:(0,n.jsx)(d,{...e})}):d(e)}return b(k);})();\n;return Component;"
+  },
+  "_id": "authors/default.mdx",
+  "_raw": {
+    "sourceFilePath": "authors/default.mdx",
+    "sourceFileName": "default.mdx",
+    "sourceFileDir": "authors",
+    "contentType": "mdx",
+    "flattenedPath": "authors/default"
+  },
+  "type": "Authors",
+  "readingTime": {
+    "text": "1 min read",
+    "minutes": 0.415,
+    "time": 24900,
+    "words": 83
+  },
+  "slug": "default",
+  "path": "authors/default",
+  "filePath": "authors/default.mdx",
+  "toc": []
+}
