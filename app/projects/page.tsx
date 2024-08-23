@@ -1,13 +1,29 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable prettier/prettier */
+
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 import { fetchEntries } from '../../lib/contentful'
+import { Entry } from 'contentful'
 
 export const metadata = genPageMetadata({ title: 'Projects' })
 
 export default async function Projects() {
   const entries = await fetchEntries()
-  const posts = entries.map((entry) => entry.fields)
+  const posts = entries.map((entry: Entry<any>) => entry.fields)
+
+  function isImageField(image: any): image is { fields: { file: { url: string } } } {
+    return (
+      image &&
+      typeof image === 'object' &&
+      'fields' in image &&
+      image.fields &&
+      image.fields.file &&
+      typeof image.fields.file.url === 'string'
+    )
+  }
+
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -18,12 +34,12 @@ export default async function Projects() {
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
-            {posts.map((d) => (
+            {posts.map((d, index) => (
               <Card
-                key={d.title}
+                key={entries[index].sys.id} // Use a unique identifier from the entry
                 title={d.title}
                 description={d.description}
-                imgSrc={`https:${d.image?.fields.file.url}`} // Ensure the image URL is correctly formed
+                imgSrc={isImageField(d.image) ? `https:${d.image.fields.file.url}` : ''} // Ensure the image URL is correctly formed
                 href={d.link}
               />
             ))}
