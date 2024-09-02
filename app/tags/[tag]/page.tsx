@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable prettier/prettier */
+
 import { slug } from 'github-slugger'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import siteMetadata from '@/data/siteMetadata'
@@ -33,34 +36,36 @@ export const generateStaticParams = async () => {
 }
 
 export default async function TagPage({ params }: { params: { tag: string } }) {
-
   const entries = await fetchEntries()
-  const postsContentful = entries.filter((entry: Entry<any>) => entry.fields.mdxSource)
+  const postsContentful = entries
+    .filter((entry: Entry<any>) => entry.fields.mdxSource)
     .map((entry: Entry<any>) => entry.fields)
     .sort((a: any, b: any) => {
-      return (new Date(b.date).getDate() - new Date(a.date).getDate())
+      return new Date(b.date).getDate() - new Date(a.date).getDate()
     })
-    const postings: {
-      path: string;
-      date: string;
-      title: string;
-      summary: string;
-      tags: string[];
-    }[] = [];
-    postsContentful.map((post) => {
-      let posting = {
-        path: (post.link as string)?.slice(1),
-        date: post.date as string,
-        title: post.title as string,
-        summary: post.description as string,
-        tags: post.tags as string[],
-      }
-      postings.push(posting)
-    })
+  const postings: {
+    path: string
+    date: string
+    title: string
+    summary: string
+    tags: string[]
+  }[] = []
+  postsContentful.map((post) => {
+    const posting = {
+      path: (post.link as string)?.slice(1),
+      date: post.date as string,
+      title: post.title as string,
+      summary: post.description as string,
+      tags: post.tags as string[],
+    }
+    postings.push(posting)
+  })
   const tag = decodeURI(params.tag)
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
-  const filteredPosts = postings.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag))
-  
+  const filteredPosts = postings.filter(
+    (post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)
+  )
+
   return <ListLayout posts={filteredPosts} title={title} />
 }

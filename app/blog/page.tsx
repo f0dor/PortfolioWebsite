@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable prettier/prettier */
+
 import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
@@ -11,10 +14,11 @@ export const metadata = genPageMetadata({ title: 'Blog' })
 
 export default async function BlogPage() {
   const entries = await fetchEntries()
-  const postsContentful = entries.filter((entry: Entry<any>) => entry.fields.mdxSource)
+  const postsContentful = entries
+    .filter((entry: Entry<any>) => entry.fields.mdxSource)
     .map((entry: Entry<any>) => entry.fields)
     .sort((a: any, b: any) => {
-      return (new Date(b.date).getDate() - new Date(a.date).getDate())
+      return new Date(b.date).getDate() - new Date(a.date).getDate()
     })
   const pageNumber = 1
   const pagination = {
@@ -22,14 +26,14 @@ export default async function BlogPage() {
     totalPages: Math.ceil(postsContentful.length / POSTS_PER_PAGE),
   }
   const postings: {
-    path: string;
-    date: string;
-    title: string;
-    summary: string;
-    tags: string[];
-  }[] = [];
+    path: string
+    date: string
+    title: string
+    summary: string
+    tags: string[]
+  }[] = []
   postsContentful.map((post) => {
-    let posting = {
+    const posting = {
       path: (post.link as string)?.slice(1),
       date: post.date as string,
       title: post.title as string,
