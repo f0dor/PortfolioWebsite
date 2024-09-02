@@ -6,6 +6,8 @@ import { allBlogs } from 'contentlayer/generated'
 import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
+import { fetchEntries } from '../../../lib/contentful'
+import { Entry } from 'contentful'
 
 export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {
   const tag = decodeURI(params.tag)
@@ -30,12 +32,35 @@ export const generateStaticParams = async () => {
   return paths
 }
 
-export default function TagPage({ params }: { params: { tag: string } }) {
+export default async function TagPage({ params }: { params: { tag: string } }) {
+
+  const entries = await fetchEntries()
+  const postsContentful = entries.filter((entry: Entry<any>) => entry.fields.mdxSource)
+    .map((entry: Entry<any>) => entry.fields)
+    .sort((a: any, b: any) => {
+      return (new Date(b.date).getDate() - new Date(a.date).getDate())
+    })
+    const postings: {
+      path: string;
+      date: string;
+      title: string;
+      summary: string;
+      tags: string[];
+    }[] = [];
+    postsContentful.map((post) => {
+      let posting = {
+        path: (post.link as string)?.slice(1),
+        date: post.date as string,
+        title: post.title as string,
+        summary: post.description as string,
+        tags: post.tags as string[],
+      }
+      postings.push(posting)
+    })
   const tag = decodeURI(params.tag)
   // Capitalize first letter and convert space to dash
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
-  const filteredPosts = allCoreContent(
-    sortPosts(allBlogs.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)))
-  )
+  const filteredPosts = postings.filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag))
+  
   return <ListLayout posts={filteredPosts} title={title} />
 }
