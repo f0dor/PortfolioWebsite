@@ -11,7 +11,7 @@ export const metadata = genPageMetadata({ title: 'Projects' })
 
 export default async function Projects() {
   const entries = await fetchEntries()
-  const posts = entries.map((entry: Entry<any>) => entry.fields)
+  const posts = entries.filter((entry: Entry<any>) => entry.fields.project).map((entry: Entry<any>) => entry.fields)
 
   function isImageField(image: any): image is { fields: { file: { url: string } } } {
     return (

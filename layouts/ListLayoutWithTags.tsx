@@ -16,9 +16,21 @@ interface PaginationProps {
   currentPage: number
 }
 interface ListLayoutProps {
-  posts: CoreContent<Blog>[]
+  posts: {
+    path: string;
+    date: string;
+    title: string;
+    summary: string;
+    tags: string[];
+  }[]
   title: string
-  initialDisplayPosts?: CoreContent<Blog>[]
+  initialDisplayPosts?:{
+    path: string;
+    date: string;
+    title: string;
+    summary: string;
+    tags: string[];
+  }[]
   pagination?: PaginationProps
 }
 
