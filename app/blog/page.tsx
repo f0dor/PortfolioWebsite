@@ -30,7 +30,7 @@ export default async function BlogPage() {
   }[] = [];
   postsContentful.map((post) => {
     let posting = {
-      path: post.link as string,
+      path: (post.link as string)?.slice(1),
       date: post.date as string,
       title: post.title as string,
       summary: post.description as string,
