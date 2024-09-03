@@ -32,7 +32,6 @@ export default async function Page() {
     }
     postings.push(posting)
   })
-  const sortedPosts = sortPosts(allBlogs)
-  const posts = allCoreContent(sortedPosts)
-  return <Main posts={postings} />
+  return <Main posts={postings
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())} />
 }
