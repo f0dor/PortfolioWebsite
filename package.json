@@ -19,6 +19,7 @@
     "@next/mdx": "^14.2.7",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.12",
+    "@vercel/speed-insights": "^1.0.12",
     "autoprefixer": "^10.4.13",
     "contentful": "^10.15.0",
     "contentlayer2": "0.4.6",
