@@ -24,7 +24,7 @@ interface ListLayoutProps {
     tags: string[];
   }[]
   title: string
-  initialDisplayPosts?:{
+  initialDisplayPosts?: {
     path: string;
     date: string;
     title: string;
@@ -80,10 +80,16 @@ export default function ListLayoutWithTags({
   initialDisplayPosts = [],
   pagination,
 }: ListLayoutProps) {
+  const tagCounts = posts.reduce((counts, post) => {
+    post.tags.forEach(tag => {
+      const upperCaseTag = tag.toUpperCase();
+      counts[upperCaseTag] = (counts[upperCaseTag] || 0) + 1;
+    });
+    return counts;
+  }, {});
+
+  const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
   const pathname = usePathname()
-  const tagCounts = tagData as Record<string, number>
-  const tagKeys = Object.keys(tagCounts)
-  const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
 
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 

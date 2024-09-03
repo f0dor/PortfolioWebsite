@@ -65,7 +65,7 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   const filteredPosts = postings.filter(
     (post) => post.tags && post.tags.map((t) => slug(t)).includes(tag)
-  )
+  ).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return <ListLayout posts={filteredPosts} title={title} />
 }

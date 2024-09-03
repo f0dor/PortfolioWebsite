@@ -1,18 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable prettier/prettier */
 
+
 import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
-import { genPageMetadata } from 'app/seo'
-import { fetchEntries } from '../../lib/contentful'
+
+import { fetchEntries } from '../../../../lib/contentful'
 import { Entry } from 'contentful'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({ title: 'Blog' })
+export const generateStaticParams = async () => {
+  const totalPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE)
+  const paths = Array.from({ length: totalPages }, (_, i) => ({ page: (i + 1).toString() }))
 
-export default async function BlogPage() {
+  return paths
+}
+
+export default async function Page({ params }: { params: { page: string } }) {
   const entries = await fetchEntries()
   const postsContentful = entries
     .filter((entry: Entry<any>) => entry.fields.mdxSource)
@@ -20,7 +26,7 @@ export default async function BlogPage() {
     .sort((a: any, b: any) => {
       return new Date(b.date).getDate() - new Date(a.date).getDate()
     })
-  const pageNumber = 1
+  const pageNumber = parseInt(params.page as string)
   const pagination = {
     currentPage: pageNumber,
     totalPages: Math.ceil(postsContentful.length / POSTS_PER_PAGE),
